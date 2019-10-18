@@ -62,10 +62,13 @@ public class Main {
     }
 
     private static String getDataFromUser(String s) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner("");
         System.out.println(s);
         System.out.print("> ");
-        return scan.next();
+        String value = "";
+        value = scan.nextLine();
+        scan.close();
+        return value;
     }
 
     private static Cell getOneRecord(String tableName, String rowKey) throws IOException {
@@ -119,7 +122,8 @@ public class Main {
             "Famo che hai sbagliato e amici come prima.",
             "Non faccio quello che ti aspetti, ci sarà un motivo?",
             "Fatti una domanda e datti una risposta.",
-            "Si m'pò n'cojone compà."
+            "Si m'pò n'cojone compà.",
+            "Sei un baby."
     };
     private static String getRandom(String[] array) {
         int rnd = new Random().nextInt(array.length);
